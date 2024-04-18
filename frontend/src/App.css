@@ -1,0 +1,14 @@
+#or{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 8px;  
+}
+#or::before,
+#or::after {
+    content: '';
+    flex: 1;                    
+    height: 0.5px;
+    background: #7F7F7F;       
+}

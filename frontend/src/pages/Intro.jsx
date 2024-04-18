@@ -3,8 +3,8 @@ import intro1 from "../assets/running.svg";
 import intro2 from "../assets/cycling.svg";
 import next1 from "../assets/next1.svg";
 import next2 from "../assets/next2.svg";
-import battery from "../assets/battery.svg";
 import { Link, useNavigate } from "react-router-dom";
+import NavBar from "../components/NavBar";
 
 const contents = [
   {
@@ -36,10 +36,7 @@ function Intro() {
 
     return (
       <div className="h-screen relative flex justify-center items-center font-montserrat">
-        <section className="flex items-center justify-between w-full absolute top-0 p-3">
-          <p className=" font-semibold leading-introTime text-sm">9:41</p>
-          <img src={battery} alt="battery" />
-        </section>
+        <NavBar/>
         <Link to={"/signup"} className="absolute cursor-pointer right-2 top-11 font-medium underline underline-offset-4 leading-intro text-base text-introPurple">Skip</Link>
         <section className="flex flex-col gap-9 px-8">
           <img
