@@ -11,7 +11,7 @@ export default {
       },
       fontSize: {
         'graph': "11.2px",
-        'xxs':"10px"
+        'xxs': "10px"
       },
       lineHeight: {
         'intro': "19.5px",
@@ -33,21 +33,23 @@ export default {
         'intro-img': "352px",
         'input': "343px",
         'icon': "18px",
-        'workout-card':"343px"
+        'workout-card': "343px"
       },
       height: {
         'intro-img': "234.61px",
         'input': "50px",
         'icon': "18px",
-        'workout-card':"75px"
+        'workout-card': "75px"
       },
       backgroundImage: {
         'gradient-btn': 'linear-gradient(270deg, #7B91FF 0%, #95BEFF 100%)',
         'gradient-search': 'linear-gradient(90.95deg, #DEE5FF 0.79%, #809AFF 99.18%)',
-        'gradient-alert': 'linear-gradient(90.07deg, rgba(129, 157, 255, 0.28) 5.94%, rgba(16, 16, 16, 0) 76.45%)'
+        'gradient-alert': 'linear-gradient(90.07deg, rgba(129, 157, 255, 0.28) 5.94%, rgba(16, 16, 16, 0) 76.45%)',
+
       },
       backgroundColor: {
-        'input-gray': "#F1F1F1"
+        'input-gray': "#F1F1F1",
+        'whatWorkout': "#8CB1FF"
       },
       borderRadius: {
         'input': '12px 12px 12px 12px',

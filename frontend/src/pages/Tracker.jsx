@@ -6,7 +6,9 @@ import graph from "../assets/stats.svg";
 import alert from "../assets/alert.svg";
 import fullBody from "../assets/full_body.svg";
 import upperBody from "../assets/upper_body.svg";
+import whatWorkout from "../assets/train2.svg";
 import Switch from "react-switch";
+import { Link, useNavigate } from "react-router-dom";
 
 function Tracker() {
   const [workouts, setWorkouts] = useState([
@@ -24,16 +26,20 @@ function Tracker() {
     },
   ]);
 
+  const navigate=useNavigate()
+
   const handleChange = (e) => {
     let tempWorkouts = workouts;
     tempWorkouts[e.target.name].checked = !tempWorkouts[e.target.id].checked;
     setWorkouts(tempWorkouts);
   };
   return (
-    <div className="overflow-y-scroll font-montserrat h-screen relative">
+    <div className="font-montserrat min-h-screen relative">
       <NavBar />
-      <img src={back} alt="back-btn" className="absolute top-18 left-4" />
-      <div className="w-full text-center absolute top-16 flex flex-col gap-16 px-4">
+      <Link to={"/goals"} className="absolute top-18 left-4 cursor-pointer" >
+        <img src={back} alt="back-btn" />
+      </Link>
+      <div className="overflow-y-scroll w-full text-center absolute top-16 flex flex-col gap-16 px-4">
         <h1 className="leading-introHeading font-semibold m-auto text-xl">
           Workout Tracker
         </h1>
@@ -71,7 +77,7 @@ function Tracker() {
                 <Switch
                   checked={workout.checked}
                   name={index}
-                  onChange={()=>handleChange(e)}
+                  onChange={() => handleChange(e)}
                   onColor="#000000"
                   onHandleColor="#8099FF"
                   offColor="#8099FF"
@@ -88,6 +94,17 @@ function Tracker() {
               </div>
             );
           })}
+        </section>
+        <section className="flex flex-col gap-2 -mt-10">
+          <h1 className="font-semibold text-base justify-self-start self-start">What Do You Want to Train</h1>
+          <div className="p-4 flex items-center justify-between bg-whatWorkout rounded-input">
+            <section className="flex flex-col gap-2 items-start">
+                <p className="text-xs font-medium">Full Body Workout</p>
+                <p className="text-xxs font-medium">Arms</p>
+                <p className="text-xxs font-medium">Chest</p>
+            </section>
+            <img src={whatWorkout} alt="workout-svg" />
+          </div>
         </section>
       </div>
       <Footer />

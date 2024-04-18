@@ -42,14 +42,14 @@ function Signin() {
             <img
               src={google}
               alt="google-icon"
-              className=" cursor-pointer h-18 w-18"
+              className=" cursor-pointer h-4 w-4"
             />
           </div>
           <div className=" h-11 w-11  border border-text-input flex justify-center items-center rounded-input">
             <img
               src={meta}
               alt="meta-icon"
-              className=" cursor-pointer h-18 w-18"
+              className=" cursor-pointer h-4 w-4"
             />
           </div>
         </section>

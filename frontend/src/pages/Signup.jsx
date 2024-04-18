@@ -60,9 +60,9 @@ function Signup() {
         </section>
       </form>
       <section className="absolute bottom-8 flex flex-col gap-5">
-        <button className="w-input h-input bg-gradient-btn text-white text-base font-semibold rounded-input text-center">
+        <Link to={"/goals"} className="w-input h-input bg-gradient-btn text-white text-base font-semibold rounded-input flex justify-center items-center">
           Create an Account
-        </button>
+        </Link>
         <section id="or" className="text-xs">
           Or
         </section>
@@ -71,14 +71,14 @@ function Signup() {
             <img
               src={google}
               alt="google-icon"
-              className=" cursor-pointer h-18 w-18"
+              className=" cursor-pointer h-4 w-4 "
             />
           </div>
           <div className=" h-11 w-11  border border-text-input flex justify-center items-center rounded-input">
             <img
               src={meta}
               alt="meta-icon"
-              className=" cursor-pointer h-18 w-18"
+              className=" cursor-pointer h-4 w-4 "
             />
           </div>
         </section>

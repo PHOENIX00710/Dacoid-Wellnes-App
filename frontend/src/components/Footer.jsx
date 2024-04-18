@@ -7,7 +7,7 @@ import search from "../assets/search.svg";
 
 function Footer() {
   return (
-    <div className="absolute bottom-0 w-full flex items-center justify-center gap-10 py-1 px-4 h-20">
+    <div className="fixed z-10 bg-white bottom-0 w-full flex items-center justify-center gap-10 py-1 px-4 h-20">
       <img src={home} alt="home-btn" className="cursor-pointer" />
       <img src={messages} alt="messages-btn" className="cursor-pointer" />
       <div className=" w-16 h-16 -ml-4 -mr-4 bg-gradient-search relative bottom-9 rounded-full flex justify-center items-center cursor-pointer">

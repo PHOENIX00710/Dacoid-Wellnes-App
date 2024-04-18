@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../components/NavBar";
+import { useNavigate } from "react-router-dom";
 
 const goals = [
   {
@@ -23,6 +24,7 @@ const goals = [
 ];
 
 function Goals() {
+  const navigate = useNavigate();
   return (
     <div className="h-screen font-montserrat w-full relative">
       <NavBar />
@@ -46,7 +48,7 @@ function Goals() {
         })}
       </section>
       <div className="w-full absolute flex bottom-20">
-        <button className="m-auto w-input h-input bg-gradient-btn text-white text-base font-semibold rounded-input text-center">
+        <button className="m-auto w-input h-input bg-gradient-btn text-white text-base font-semibold rounded-input text-center cursor-pointer" onClick={()=>navigate("/tracker")}>
           Confirm
         </button>
       </div>
