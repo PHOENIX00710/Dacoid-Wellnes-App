@@ -56,7 +56,8 @@ export default {
       borderRadius: {
         'input': '12px 12px 12px 12px',
         'alert': '10px 10px 10px 10px',
-        'goals': '4px 4px 4px 4px'
+        'goals': '4px 4px 4px 4px',
+        'workouts': '20px 20px 20px 20px',
       },
       spacing: {
         '18': '68px'

@@ -134,20 +134,64 @@ function Schedule() {
         </section>
         <section className="flex flex-col">
           {slots.map((slot, index) => {
+            if (index == 1) {
+              return (
+                <div
+                  className="text-xs font-semibold py-3 px-4 leading-signup w-full border-b border-input-text border-spacing-2 flex justify-between"
+                  key={index}
+                >
+                  <p>{slot.time}</p>
+                  <div className="z-10 absolute left-36 h-8 w-48 flex justify-center items-center ">
+                    <span className="rounded-workouts relative -bottom-2 h-max  bg-gradient-plus py-2 px-3 text-white">
+                      Ab Workout, 7:30am
+                    </span>
+                  </div>
+                </div>
+              );
+            }
+            if (index == 3) {
+              return (
+                <div
+                  className="text-xs font-semibold py-3 px-4 leading-signup w-full border-b border-input-text border-spacing-2 flex justify-between"
+                  key={index}
+                >
+                  <p>{slot.time}</p>
+                  <div className="z-10 absolute left-24 h-8 w-48 flex justify-center items-center ">
+                    <span className="rounded-workouts relative bottom-1 h-max  bg-gradient-plus py-2 px-3 text-white">
+                      Upperbody Workout, 9am
+                    </span>
+                  </div>
+                </div>
+              );
+            }
+            if (index == 8) {
+                return (
+                  <div
+                    className="text-xs font-semibold py-3 px-4 leading-signup w-full border-b border-input-text border-spacing-2 flex justify-between"
+                    key={index}
+                  >
+                    <p>{slot.time}</p>
+                    <div className="z-10 absolute left-24 h-8 w-48 flex justify-center items-center ">
+                      <span className="rounded-workouts relative bottom-2 h-max  bg-input-gray py-2 px-3 text-black">
+                      Lowerbody Workout, 3pm
+                      </span>
+                    </div>
+                  </div>
+                );
+              }
             return (
               <div
                 className="text-xs font-semibold py-3 px-4 leading-signup w-full border-b border-input-text border-spacing-2 flex"
                 key={index}
               >
                 <p>{slot.time}</p>
-                
               </div>
             );
           })}
         </section>
       </div>
-      <div className=" w-daicon-width h-16 fixed left-3/4 bottom-32 ">
-        <div className="rounded-full bg-gradient-plus text-white flex justify-center items-center w-16 h-16 ">
+      <div className="fixed z-10 bottom-28 w-daicon-width flex items-center justify-center gap-10 py-1 px-4 h-20">
+        <div className="rounded-full relative left-28 bg-gradient-plus text-white flex justify-center items-center w-16 h-16 ">
           <img src={plus} alt="plus-svg" />
         </div>
       </div>

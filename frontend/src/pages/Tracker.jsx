@@ -74,7 +74,7 @@ function Tracker() {
           </section>
           {workouts.map((workout, index) => {
             return (
-              <div className="flex items-center justify-between rounded-input shadow-lg p-3">
+              <div className="flex items-center justify-between rounded-input shadow-lg p-3" key={index}>
                 <div className="flex gap-4 items-center">
                   <img src={workout.svg} alt="image of workout" />
                   <div className="flex flex-col justify-between gap-2 items-start">
