@@ -5,6 +5,7 @@ import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import Goals from "./pages/Goals";
 import Tracker from "./pages/Tracker";
+import Schedule from "./pages/Schedule";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/goals" element={<Goals />} />
         <Route path="/tracker" element={<Tracker />} />
+        <Route path="/schedule" element={<Schedule />} />
       </Routes>
     </Router>
   );

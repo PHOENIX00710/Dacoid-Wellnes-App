@@ -26,7 +26,7 @@ const goals = [
 function Goals() {
   const navigate = useNavigate();
   return (
-    <div className="h-screen font-montserrat w-full relative">
+    <div className="h-daicon-height w-daicon-width font-montserrat relative">
       <NavBar />
       <section className="absolute w-full top-16 flex flex-col text-center gap-4">
         <h1 className="leading-introHeading font-semibold my-6 text-xl">

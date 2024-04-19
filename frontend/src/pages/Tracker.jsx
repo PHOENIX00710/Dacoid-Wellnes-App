@@ -26,32 +26,42 @@ function Tracker() {
     },
   ]);
 
-  const navigate=useNavigate()
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
-    let tempWorkouts = workouts;
+    let tempWorkouts = [...workouts];
     tempWorkouts[e.target.name].checked = !tempWorkouts[e.target.id].checked;
     setWorkouts(tempWorkouts);
   };
   return (
-    <div className="font-montserrat min-h-screen relative">
+    <div className="h-daicon-height w-daicon-width font-montserrat min-h-screen relative">
       <NavBar />
-      <Link to={"/goals"} className="absolute top-18 left-4 cursor-pointer" >
-        <img src={back} alt="back-btn" />
-      </Link>
       <div className="overflow-y-scroll w-full text-center absolute top-16 flex flex-col gap-16 px-4">
-        <h1 className="leading-introHeading font-semibold m-auto text-xl">
-          Workout Tracker
-        </h1>
+        <section className="flex items-center justify-around">
+          <img
+            src={back}
+            alt="back-btn"
+            className="cursor-pointer"
+            onClick={() => navigate("/goals")}
+          />
+          <h1 className="leading-introHeading font-semibold m-auto text-xl">
+            Workout Schedule
+          </h1>{" "}
+        </section>
         <section className="flex flex-col gap-2">
           <div className="flex justify-around pl-12 items-center text-graph font-normal">
             <p> </p>
             <p>Good job</p>
             <p>less then 320cal</p>
           </div>
-          <img src={graph} alt="graph-img" />
+          <img
+            src={graph}
+            alt="graph-img"
+            className="cursor-pointer"
+            onClick={() => navigate("/schedule")}
+          />
           <div className="mt-4 bg-gradient-alert flex items-center gap-2 px-4 py-2 rounded-alert">
-            <img src={alert} alt="alert-img" />
+            <img src={alert} alt="alert-img" className=" cursor-pointer" />
             <p className="text-xs font-medium text-left max-w-64 leading-alert">
               You've burned fewer calories than yesterday. Time to get moving!{" "}
             </p>
@@ -96,12 +106,14 @@ function Tracker() {
           })}
         </section>
         <section className="flex flex-col gap-2 -mt-10">
-          <h1 className="font-semibold text-base justify-self-start self-start">What Do You Want to Train</h1>
+          <h1 className="font-semibold text-base justify-self-start self-start">
+            What Do You Want to Train
+          </h1>
           <div className="p-4 flex items-center justify-between bg-whatWorkout rounded-input">
             <section className="flex flex-col gap-2 items-start">
-                <p className="text-xs font-medium">Full Body Workout</p>
-                <p className="text-xxs font-medium">Arms</p>
-                <p className="text-xxs font-medium">Chest</p>
+              <p className="text-xs font-medium">Full Body Workout</p>
+              <p className="text-xxs font-medium">Arms</p>
+              <p className="text-xxs font-medium">Chest</p>
             </section>
             <img src={whatWorkout} alt="workout-svg" />
           </div>

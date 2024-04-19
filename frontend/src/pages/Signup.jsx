@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function Signup() {
   return (
-    <div className=" font-montserrat flex flex-col justify-between h-screen items-center relative">
+    <div className=" h-daicon-height w-daicon-width font-montserrat flex flex-col justify-between items-center relative">
       <NavBar />
       <form action="" className="flex flex-col px-10 gap-6 absolute top-16">
         <h1 className="font-semibold text-xl mb-4 ">Create an Account</h1>
