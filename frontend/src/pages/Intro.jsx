@@ -37,7 +37,7 @@ function Intro() {
     return (
       <div className="h-daicon-height w-daicon-width relative flex justify-center items-center font-montserrat">
         <NavBar/>
-        <Link to={"/signup"} className="absolute cursor-pointer right-2 top-11 font-medium underline underline-offset-4 leading-intro text-base text-introPurple">Skip</Link>
+        <Link to={"/signup"} className="absolute cursor-pointer right-3 top-12 font-medium underline underline-offset-4 leading-intro text-base text-introPurple">Skip</Link>
         <section className="flex flex-col gap-9 px-8">
           <img
             src={contents[currContent].svg}

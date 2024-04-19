@@ -191,7 +191,7 @@ function Schedule() {
         </section>
       </div>
       <div className="fixed z-10 bottom-28 w-daicon-width flex items-center justify-center gap-10 py-1 px-4 h-20">
-        <div className="rounded-full relative left-28 bg-gradient-plus text-white flex justify-center items-center w-16 h-16 ">
+        <div className="rounded-full relative left-28 bg-gradient-plus text-white flex justify-center items-center w-16 h-16 cursor-pointer ">
           <img src={plus} alt="plus-svg" />
         </div>
       </div>
